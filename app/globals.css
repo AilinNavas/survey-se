@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main: #0a2a54;
+  --secondary-1: #3c8dbc;
+  --secondary-2: #5a6065;
+  --background: #fcfdfd;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-main {
+    color: var(--main);
+  }
+  .text-secondary-1 {
+    color: var(--secondary-1);
+  }
+  .text-secondary-2 {
+    color: var(--secondary-2);
+  }
+  .bg-main {
+    background-color: var(--main);
+  }
+  .bg-secondary-1 {
+    background-color: var(--secondary-1);
+  }
+  .border-main {
+    border-color: var(--main);
+  }
+  .border-secondary-1 {
+    border-color: var(--secondary-1);
+  }
+}
