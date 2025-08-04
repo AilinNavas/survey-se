@@ -1,59 +1,4 @@
 
-// "use client"
-
-// import { MessageSquare } from "lucide-react"
-// import PracticeHeader from "@/components/practice-header"
-
-// export default function FeedbackPage() {
-//   return (
-//     <div className="min-h-screen flex flex-col items-center justify-center px-4">
-//       <div className="max-w-2xl w-full text-center">
-//         <PracticeHeader className="mb-8" />
-
-//         <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12">
-//           <div className="flex justify-center mb-6">
-//             <div className="bg-blue-100 rounded-full p-4">
-//               <MessageSquare size={32} className="text-secondary-1" />
-//             </div>
-//           </div>
-
-//           <h2 className="text-2xl md:text-3xl font-semibold text-main mb-6">
-//             We'd love to hear how we can improve
-//           </h2>
-
-//           <p className="text-lg text-secondary-2 mb-8 leading-relaxed">
-//             Please let us know what we could have done better. Your feedback helps us provide the best care possible.
-//           </p>
-
-//           <form
-//             action="https://formspree.io/f/mblkzrga"
-//             method="POST"
-//             className="space-y-6"
-//           >
-//             <div className="text-left">
-//               <textarea
-//                 name="message"
-//                 placeholder="Share your thoughts with us..."
-//                 rows={6}
-//                 className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-secondary-1 focus:outline-none transition-colors resize-none text-secondary-2"
-//                 required
-//               />
-//             </div>
-
-//             <button
-//               type="submit"
-//               className="w-full bg-main hover:bg-opacity-90 text-white font-semibold py-4 px-8 rounded-full transition-all duration-200 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-secondary-1 focus:ring-opacity-50"
-//             >
-//               Submit Feedback
-//             </button>
-//           </form>
-//         </div>
-//       </div>
-//     </div>
-//   )
-// }
-
-
 "use client"
 
 import type React from "react"
@@ -74,7 +19,7 @@ export default function FeedbackPage() {
       const formData = new FormData()
       formData.append("feedback", feedback)
 
-      const res = await fetch("https://formspree.io/f/mblkzrga", {
+      const res = await fetch("https://formspree.io/f/mqalykwq", {
         method: "POST",
         body: formData,
         headers: {

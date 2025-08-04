@@ -12,7 +12,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
 export const metadata: Metadata = {
   title: "Patient Survey - Southside Endodontics",
   description: "Share your experience with Southside Endodontics",
-    generator: 'v0.dev'
+    generator: ''
 }
 
 export default function RootLayout({
