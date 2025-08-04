@@ -11,14 +11,28 @@ export default function FeedbackPage() {
   const [feedback, setFeedback] = useState("")
   const router = useRouter()
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (feedback.trim()) {
-      // In a real app, you would send this feedback to your backend
-      console.log("Feedback submitted:", feedback)
-      router.push("/thank-you")
-    }
+ const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault()
+  if (!feedback.trim()) return
+
+  try {
+    const res = await fetch("https://script.google.com/macros/s/AKfycbykfqFrzloEHHtQ2oYck2yTGno4c4uaeSnEcCSmu2pGEVMVznfJ7_dgjgNoPuBxmtO21w/exec", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: new URLSearchParams({ feedback }).toString(),
+    })
+
+    const result = await res.json()
+    console.log("Google Sheets response:", result)
+
+    router.push("/thank-you")
+  } catch (error) {
+    console.error("Error submitting feedback:", error)
   }
+}
+
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center px-4">
