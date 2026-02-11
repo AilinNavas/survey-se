@@ -14,7 +14,7 @@ export default function PracticeHeader({ className = "" }: PracticeHeaderProps) 
           alt="Southside Endodontics - Neal Horn DDS MS"
           width={400}
           height={120}
-          className="h-12 xs:h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto object-contain max-w-full"
+          className="h-24 xl:h-28 w-auto object-contain max-w-full "
           priority
         />
       </div>
